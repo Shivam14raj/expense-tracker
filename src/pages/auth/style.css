@@ -1,0 +1,61 @@
+/* Login page container */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
+  min-height: 100vh;         /* full viewport height */
+  /* background: linear-gradient(135deg, #70e1f5, #ffd194); soft gradient */
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+}
+
+/* Login card effect using the container itself */
+.login-page h4 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Google login button */
+.login-with-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #444;
+  font-weight: 600;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 260px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Google logo inside button */
+.login-with-google-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+
+/* Hover effect */
+.login-with-google-btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.login-page {
+  animation: fadeInUp 0.6s ease forwards;
+}

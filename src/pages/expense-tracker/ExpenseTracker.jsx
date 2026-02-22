@@ -17,7 +17,8 @@ export const ExpenseTracker = () => {
   const { balance = 0, income = 0, expenses = 0 } = getHook.transactionTotals || {};
 
   const userInfo = useGetUserInfo() || {};
-  const { name } = userInfo;
+  // const { name } = userInfo;
+  const { name = "" } = userInfo;
   const userID = userInfo.userID; // needed for reset
 
   const [description, setDescription] = useState("");
@@ -46,7 +47,8 @@ export const ExpenseTracker = () => {
   const signUserOut = async () => {
     try {
       await signOut(auth);
-      localStorage.clear();
+      // localStorage.clear();
+      localStorage.removeItem("auth");
       navigate("/");
     } catch (e) {
       console.error(e);

@@ -4,6 +4,8 @@ import { useNavigate, Navigate } from "react-router-dom";
 import {useGetUserInfo} from '../../hooks/useGetUserInfo';
 import "./style.css";
 import { useEffect } from "react";
+import googleimg from "../../assets/google.png";
+
 export const Auth = () => {
   const navigate = useNavigate();
 
@@ -51,7 +53,7 @@ export const Auth = () => {
         <h4>Sign in with Google to continue</h4>
         <button className="login-with-google-btn" onClick={signInWithGoogle}>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            src={googleimg}
             alt="Google Logo"
           />
           Sign in with Google
